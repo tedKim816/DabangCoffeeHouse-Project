@@ -9,19 +9,19 @@
      <div class="collapse navbar-collapse" id="navbarText">
        <ul class="navbar-nav ml-auto">
            <li class="nav-item">
-             <a class="nav-link" href="#Welcome">Welcome</a>
+             <a class="nav-link" href="#Welcome" (click)="getActiveTab('home')" [class.active]="activetab === 'home'">Welcome</a>
            </li>
          <li class="nav-item">
-           <a class="nav-link" href="#Restaurant">Restaurant</a>
+           <a class="nav-link" href="#Restaurant" (click)="getActiveTab('restaurant')" [class.active]="activetab === 'restaurant'">Restaurant</a>
          </li>
          <li class="nav-item">
-           <a class="nav-link" href="#Menu">Menu</a>
+           <a class="nav-link" href="#Menu" (click)="getActiveTab('menu')" [class.active]="activetab === 'menu'">Menu</a>
          </li>
          <li class="nav-item">
-           <a class="nav-link" href="#Reservation">Reservation</a>
+           <a class="nav-link" href="#Reservation" (click)="getActiveTab('reservation')" [class.active]="activetab === 'reservation'">Reservation</a>
          </li>
          <li class="nav-item">
-           <a class="nav-link" href="#OurLocation">Our Location</a>
+           <a class="nav-link" href="#OurLocation" (click)="getActiveTab('location')" [class.active]="activetab === 'location'">Our Location</a>
          </li>
          <li class="nav-item">
            <a href="it/index.html" class="language" rel="it-IT"><img src="../assets/img/italy.ico" class="flag" alt="Italiano" /></a>

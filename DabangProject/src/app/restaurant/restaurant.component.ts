@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConfigService } from '../config.service';
 
 @Component({
   selector: 'app-restaurant',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RestaurantComponent implements OnInit {
 
-  constructor() { }
+  restaurantText = {};
+  constructor(private config: ConfigService) { }
 
   ngOnInit() {
+    this.restaurantText = this.getRestaurant();
+  }
+
+  getRestaurant() {
+
+    return this.config.getConfig().restaurantText;
   }
 
 }
