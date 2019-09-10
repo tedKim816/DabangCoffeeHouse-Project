@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ConfigService } from '../config.service';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-restaurant',
@@ -13,6 +14,11 @@ export class RestaurantComponent implements OnInit {
 
   ngOnInit() {
     this.restaurantText = this.getRestaurant();
+
+    AOS.init({
+      duration: 1200
+     });
+
   }
 
   getRestaurant() {

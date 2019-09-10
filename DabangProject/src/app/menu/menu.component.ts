@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConfigService } from '../config.service';
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  menu = {};
+
+  constructor(private config: ConfigService) { }
 
   ngOnInit() {
+    this.menu = this.getMenu();
+  }
+
+  getMenu() {
+
+    return this.config.getConfig().menu;
   }
 
 }

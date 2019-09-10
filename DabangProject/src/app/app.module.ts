@@ -12,6 +12,7 @@ import { ReservationComponent } from './reservation/reservation.component';
 import { LocationComponent } from './location/location.component';
 import { ConfigService } from './config.service';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +27,7 @@ import { ConfigService } from './config.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
+ 
   ],
   providers: [],
   bootstrap: [AppComponent]

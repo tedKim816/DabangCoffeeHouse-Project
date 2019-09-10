@@ -5,12 +5,14 @@
     </div>
   </div>
   <div class="row">
-    <div id="map" class="col-md-9 map"></div>
+    <div #map style="width:100%;height:400px"></div>
+
+    <!-- <div #map id="map" class="col-md-9 map"></div> -->
     <div class="col-md-3">
-      <h3>Address:</h3>
-      <p>Viale Enrico Fermi, 20159 Milan, Mailand (Lombardia) </p>
-      <h3>Email:</h3>
-      <p>mail@example.com</p>
+      <h3>{{contact.addressTitle}}</h3>
+      <p>{{contact.address}}</p>
+      <h3>{{contact.phoneTitle}}</h3>
+      <p>{{contact.phoneNumber}}</p>
     </div>
 </div>
 
